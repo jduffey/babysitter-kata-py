@@ -9,4 +9,4 @@ The babysitter
 '''
 
 def paycalc(start_time, end_time):
-    return 12
+    return (end_time - start_time) * 12
