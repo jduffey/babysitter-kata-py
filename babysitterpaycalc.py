@@ -8,5 +8,7 @@ The babysitter
 - gets paid for full hours (no fractional hours)
 '''
 
+pay_rate_REGULAR = 12
+
 def paycalc(start_time, end_time):
-    return (end_time - start_time) * 12
+    return (end_time - start_time) * pay_rate_REGULAR
