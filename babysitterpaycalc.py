@@ -13,7 +13,8 @@ pay_rate_BEDTIME = 8
 
 def paycalc(start_time, end_time, bed_time):
     if start_time == 12:
-        return 16
+        end_time = end_time + 12
+        return 16 * (end_time - start_time)
 
     if bed_time < end_time:
         return (end_time - bed_time) * pay_rate_BEDTIME + \
