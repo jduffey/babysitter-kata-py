@@ -11,3 +11,6 @@ def test_should_pay_8_for_one_bedtime_hour_before_midnight():
 
 def test_should_pay_20_for_one_hour_each_regular_and_bedtime_before_midnight():
     assert paycalc(5, 7, 6) == 20
+
+def test_should_pay_16_for_one_hour_worked_after_midnight():
+    assert paycalc(12, 1, 4) == 16
