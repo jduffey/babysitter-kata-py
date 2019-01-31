@@ -1,11 +1,8 @@
 # babysitter-kata-py
-Babysitter kata in Python.
+Babysitter kata, in Python.
 
 From: https://gist.github.com/jameskbride/5482722
 
-Babysitter Kata
-
-Background
 ----------
 This kata simulates a babysitter working and getting paid for one night.  The rules are pretty straight forward:
 
