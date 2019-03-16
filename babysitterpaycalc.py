@@ -8,19 +8,20 @@ The babysitter
 - gets paid for full hours (no fractional hours)
 '''
 
-pay_rate_REGULAR = 12
-pay_rate_BEDTIME = 8
+PAYRATE_REGULAR = 12
+PAYRATE_BEDTIME = 8
+PAYRATE_MIDNIGHT = 16
 
 def paycalc(start_time, end_time, bed_time):
     if start_time == 12:
         end_time = end_time + 12
-        return 16 * (end_time - start_time)
+        return PAYRATE_MIDNIGHT * (end_time - start_time)
 
     if bed_time < end_time:
-        return (end_time - bed_time) * pay_rate_BEDTIME + \
-        (bed_time - start_time) * pay_rate_REGULAR
+        return (end_time - bed_time) * PAYRATE_BEDTIME + \
+        (bed_time - start_time) * PAYRATE_REGULAR
 
     if bed_time == start_time:
-        return (end_time - start_time) * pay_rate_BEDTIME
+        return (end_time - start_time) * PAYRATE_BEDTIME
 
-    return (end_time - start_time) * pay_rate_REGULAR
+    return (end_time - start_time) * PAYRATE_REGULAR
